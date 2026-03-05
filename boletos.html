@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Boletos</title>
+    <link rel="icon" type="image/png" href="assets/img/Via.png">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/big.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .ticket-form-container {
+            max-width: 600px;
+            margin: 48px auto;
+            background: #fff;
+            border-radius: 16px;
+            box-shadow: 0 4px 24px rgba(0,0,0,0.07);
+            padding: 42px 36px 32px 36px;
+        }
+        .ticket-form-container h2 {
+            text-align: center;
+            color: #2c3e50;
+            margin-bottom: 32px;
+        }
+        .form-group {
+            margin-bottom: 22px;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 7px;
+            color: #333;
+            font-weight: 500;
+        }
+        .form-group input, .form-group select {
+            width: 100%;
+            padding: 12px 14px;
+            border: 1px solid #d1d5db;
+            border-radius: 7px;
+            font-size: 1rem;
+            background: #f8f9fa;
+            transition: border 0.2s;
+        }
+        .form-group input:focus, .form-group select:focus {
+            border-color: #3498db;
+            outline: none;
+            background: #fff;
+        }
+        .form-row {
+            display: flex;
+            gap: 18px;
+        }
+        .form-row .form-group {
+            flex: 1;
+        }
+        .submit-btn {
+            width: 100%;
+            background: #3498db;
+            color: #fff;
+            border: none;
+            padding: 15px 0;
+            border-radius: 7px;
+            font-size: 1.15rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background 0.2s;
+            margin-top: 18px;
+        }
+        .submit-btn:hover {
+            background: #217dbb;
+        }
+        @media (max-width: 600px) {
+            .ticket-form-container {
+                padding: 18px 6vw;
+            }
+            .form-row {
+                flex-direction: column;
+                gap: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="nav-left">
+            <a href="index.html"><img src="assets/img/Logo.png" alt="viagogo Logo" class="logo-image"></a>
+            <a href="#">Deportes</a>
+            <a href="#">Conciertos</a>
+            <a href="#">Teatro</a>
+            <a href="#">Ciudades Principales</a>
+        </div>
+        <div class="nav-right">
+            <a href="#">Explorar</a>
+            <a href="#">Vender</a>
+            <a href="#">Favoritos</a>
+        </div>
+    </header>
+    <main>
+        <div class="ticket-form-container">
+            <h2>Formulario de Compra de Boletos</h2>
+            <form>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="partido">Partido que va a ver</label>
+                            <select id="partido" name="partido" required>
+                                <option value="">Selecciona...</option>
+                                <option value="MEX vs RSA $1200">MEX vs RSA $1200</option>
+                                <option value="América vs Cali $900">América vs Cali $900</option>
+                                <option value="Junior vs Santa Fe $950">Junior vs Santa Fe $950</option>
+                                <option value="Medellín vs Tolima $850">Medellín vs Tolima $850</option>
+                                <option value="Once Caldas vs Bucaramanga $800">Once Caldas vs Bucaramanga $800</option>
+                                <option value="Cali vs Pasto $780">Cali vs Pasto $780</option>
+                                <option value="Patriotas vs Equidad $700">Patriotas vs Equidad $700</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="cantidad">Cantidad de boletos</label>
+                            <input type="number" id="cantidad" name="cantidad" min="1" max="20" value="1" required>
+                        </div>
+                    </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="nombre">Nombre completo</label>
+                        <input type="text" id="nombre" name="nombre" required>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="direccion">Dirección</label>
+                        <input type="text" id="direccion" name="direccion" required>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="departamento">Departamento</label>
+                        <select id="departamento" name="departamento" required>
+                            <option value="">Selecciona...</option>
+                            <option value="Amazonas">Amazonas</option>
+                            <option value="Antioquia">Antioquia</option>
+                            <option value="Atlántico">Atlántico</option>
+                            <option value="Bogotá D.C.">Bogotá D.C.</option>
+                            <option value="Bolívar">Bolívar</option>
+                            <option value="Boyacá">Boyacá</option>
+                            <option value="Caldas">Caldas</option>
+                            <option value="Caquetá">Caquetá</option>
+                            <option value="Casanare">Casanare</option>
+                            <option value="Cauca">Cauca</option>
+                            <option value="Cesar">Cesar</option>
+                            <option value="Chocó">Chocó</option>
+                            <option value="Córdoba">Córdoba</option>
+                            <option value="Cundinamarca">Cundinamarca</option>
+                            <option value="Guainía">Guainía</option>
+                            <option value="Guaviare">Guaviare</option>
+                            <option value="Huila">Huila</option>
+                            <option value="La Guajira">La Guajira</option>
+                            <option value="Magdalena">Magdalena</option>
+                            <option value="Meta">Meta</option>
+                            <option value="Nariño">Nariño</option>
+                            <option value="Norte de Santander">Norte de Santander</option>
+                            <option value="Putumayo">Putumayo</option>
+                            <option value="Quindío">Quindío</option>
+                            <option value="Risaralda">Risaralda</option>
+                            <option value="San Andrés y Providencia">San Andrés y Providencia</option>
+                            <option value="Santander">Santander</option>
+                            <option value="Sucre">Sucre</option>
+                            <option value="Tolima">Tolima</option>
+                            <option value="Valle del Cauca">Valle del Cauca</option>
+                            <option value="Vaupés">Vaupés</option>
+                            <option value="Vichada">Vichada</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="ciudad">Ciudad</label>
+                        <input type="text" id="ciudad" name="ciudad" required>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="telefono">Número de teléfono</label>
+                        <input type="tel" id="telefono" name="telefono" pattern="[0-9]{7,10}" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="correo">Correo electrónico</label>
+                        <input type="email" id="correo" name="correo" required>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="documento">Tipo de documento</label>
+                        <select id="documento" name="documento" required>
+                            <option value="">Selecciona...</option>
+                            <option value="CC">Cédula de ciudadanía</option>
+                            <option value="CE">Cédula de extranjería</option>
+                            <option value="TI">Tarjeta de identidad</option>
+                            <option value="Pasaporte">Pasaporte</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="numero_documento">Número de documento</label>
+                        <input type="text" id="numero_documento" name="numero_documento" required>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="fecha_nacimiento">Fecha de nacimiento</label>
+                        <input type="date" id="fecha_nacimiento" name="fecha_nacimiento" required>
+                    </div>
+                </div>
+                <button type="submit" class="submit-btn">Comprar Boleto</button>
+                <div id="descripcion-partido" class="descripcion-partido" style="margin-top:28px; font-size:1.08rem; color:#2c3e50; background:#f8f9fa; border-radius:8px; padding:18px; display:none;"></div>
+            </form>
+        </div>
+        <script>
+        // Descripciones de partidos
+            const descripciones = {
+                "MEX vs RSA $1200": {
+                    texto: "<b>MEX vs RSA</b><br>Fecha: 10 de Junio 2026<br>Hora: 14:00<br>Estadio: Azteca, Ciudad de Mexico<br>Precio: $1200<br>Sector: Occidental Alta",
+                    precio: 1200
+                },
+                "América vs Cali $900": {
+                    texto: "<b>América vs Cali</b><br>Fecha: 12 de marzo 2026<br>Hora: 18:00<br>Estadio: Pascual Guerrero<br>Precio: $900<br>Sector: Sur Baja",
+                    precio: 900
+                },
+                "Junior vs Santa Fe $950": {
+                    texto: "<b>Junior vs Santa Fe</b><br>Fecha: 15 de marzo 2026<br>Hora: 20:00<br>Estadio: Metropolitano<br>Precio: $950<br>Sector: Norte Alta",
+                    precio: 950
+                },
+                "Medellín vs Tolima $850": {
+                    texto: "<b>Medellín vs Tolima</b><br>Fecha: 18 de marzo 2026<br>Hora: 17:00<br>Estadio: Atanasio Girardot<br>Precio: $850<br>Sector: Oriental Baja",
+                    precio: 850
+                },
+                "Once Caldas vs Bucaramanga $800": {
+                    texto: "<b>Once Caldas vs Bucaramanga</b><br>Fecha: 20 de marzo 2026<br>Hora: 16:00<br>Estadio: Palogrande<br>Precio: $800<br>Sector: General",
+                    precio: 800
+                },
+                "Cali vs Pasto $780": {
+                    texto: "<b>Cali vs Pasto</b><br>Fecha: 22 de marzo 2026<br>Hora: 19:30<br>Estadio: Deportivo Cali<br>Precio: $780<br>Sector: Sur Alta",
+                    precio: 780
+                },
+                "Patriotas vs Equidad $700": {
+                    texto: "<b>Patriotas vs Equidad</b><br>Fecha: 25 de marzo 2026<br>Hora: 15:00<br>Estadio: La Independencia<br>Precio: $700<br>Sector: Norte Baja",
+                    precio: 700
+                }
+            };
+            function actualizarDescripcion() {
+                const partido = document.getElementById('partido').value;
+                const cantidad = parseInt(document.getElementById('cantidad').value) || 1;
+                const descDiv = document.getElementById('descripcion-partido');
+                if (descripciones[partido]) {
+                    const total = descripciones[partido].precio * cantidad;
+                    descDiv.innerHTML = descripciones[partido].texto + `<br><b>Cantidad de boletos:</b> ${cantidad}<br><b>Total a pagar:</b> $${total}`;
+                    descDiv.style.display = 'block';
+                } else {
+                    descDiv.innerHTML = '';
+                    descDiv.style.display = 'none';
+                }
+            }
+            document.getElementById('partido').addEventListener('change', actualizarDescripcion);
+            document.getElementById('cantidad').addEventListener('input', actualizarDescripcion);
+        // Eliminar eventListener duplicado y usar solo actualizarDescripcion
+        </script>
+    </main>
+</body>
+</html>
+            <div class="footer-info">
+                <p><i class="fas fa-copyright"></i> 2023 MiSitio Personalizable. Todos los derechos reservados.</p>
+                <p class="footer-note">Página 2 - Acceso mediante código. Configura tus códigos en admin.js.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/js/index.js"></script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+/* Cambios para hacer todo más grande */
+body {
+    font-size: 18px !important;
+}
+.header, .header {
+    padding: 22px 60px !important;
+}
+.header a {
+    font-size: 18px !important;
+}
+.logo-image {
+    height: 52px !important;
+}
+.main-content {
+    padding: 0 32px !important;
+}
+.customizable-section {
+    padding: 42px !important;
+}
+.paragraph-container {
+    margin: 56px 0 !important;
+}
+.paragraph-container h1 {
+    font-size: 2.1rem !important;
+}
+.paragraph-area {
+    font-size: 1.25rem !important;
+}

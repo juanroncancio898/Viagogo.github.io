@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="assets/img/Via.png">
+    <title>Inicio</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/big.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <!-- Encabezado -->
+    <header class="header">
+        <div class="nav-left">
+            <a href="index.html"><img src="assets/img/Logo.png" alt="viagogo Logo" class="logo-image"></a>
+            <a href="#">Deportes</a>
+            <a href="#">Conciertos</a>
+            <a href="#">Teatro</a>
+            <a href="#">Ciudades Principales</a>
+        </div>
+
+        <div class="nav-right">
+            <a href="#">Explorar</a>
+            <a href="#">Vender</a>
+            <a href="#">Favoritos</a>
+        </div>
+        </div>
+    </header>
+
+    <!-- Área principal -->
+    <main class="main-content">
+        <section class="customizable-section">
+            <section class="hero">
+                <div class="hero-left">
+                    <h1>Copa Mundial<br>de Fútbol</h1>
+                    <a href="boletos.html" class="btn-cta">Ver boletos</a>
+                </div>
+
+                <div class="hero-right"></div>
+
+                <div class="hero-badge">
+                    20.9 k <i class="fa-regular fa-heart"></i>
+                </div>
+            </section>
+            </div>
+            </div>
+
+            <!-- Panel de administración para códigos -->
+            <div class="admin-panel">
+                <h3><i class="fas fa-lock"></i> Panel de Acceso</h3>
+                <p>Introduce un código para acceder a páginas especiales:</p>
+                <div class="code-input-container">
+                    <input type="text" id="accessCode" placeholder="Escribe el código aquí">
+                    <button id="submitCode">Acceder</button>
+                </div>
+                <div id="codeMessage" class="message"></div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Pie de página -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-logo">
+                <i class="fas fa-cube"></i>
+                <span>MiSitio Personalizable</span>
+            </div>
+            <div class="footer-links">
+                <a href="index.html">Inicio</a>
+                <a href="2page.html" id="page2Link">Página 2</a>
+                <a href="3page.html" id="page3Link">Página 3</a>
+            </div>
+            <div class="footer-info">
+                <p><i class="fas fa-copyright"></i> 2023 MiSitio Personalizable. Todos los derechos reservados.</p>
+                <p class="footer-note">Este sitio web es completamente personalizable. Edita los archivos HTML, CSS y JS
+                    para adaptarlo a tus necesidades.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/js/index.js"></script>
+    <script src="script.js"></script>
+    <script src="admin.js"></script>
+</body>
+
+</html>
