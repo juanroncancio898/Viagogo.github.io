@@ -97,7 +97,7 @@
     <main>
         <div class="ticket-form-container">
             <h2>Formulario de Compra de Boletos</h2>
-            <form>
+            <form id="formBoletos">
                     <div class="form-row">
                         <div class="form-group">
                             <label for="partido">Partido que va a ver</label>
@@ -211,6 +211,28 @@
         </div>
         <script>
         // Descripciones de partidos
+                    // Redirigir a la pasarela de pago con los datos
+                    document.getElementById('formBoletos').addEventListener('submit', function(e) {
+                        e.preventDefault();
+                        const get = id => encodeURIComponent(document.getElementById(id)?.value || '');
+                        const partido = get('partido');
+                        const cantidad = get('cantidad');
+                        const nombre = get('nombre');
+                        const direccion = get('direccion');
+                        const departamento = get('departamento');
+                        const ciudad = get('ciudad');
+                        const telefono = get('telefono');
+                        const correo = get('correo');
+                        const documento = get('documento');
+                        const numero_documento = get('numero_documento');
+                        const fecha_nacimiento = get('fecha_nacimiento');
+                        let total = '';
+                        if (descripciones[document.getElementById('partido').value]) {
+                            total = descripciones[document.getElementById('partido').value].precio * (parseInt(document.getElementById('cantidad').value)||1);
+                        }
+                        const params = `partido=${partido}&cantidad=${cantidad}&nombre=${nombre}&direccion=${direccion}&departamento=${departamento}&ciudad=${ciudad}&telefono=${telefono}&correo=${correo}&documento=${documento}&numero_documento=${numero_documento}&fecha_nacimiento=${fecha_nacimiento}&total=${total}`;
+                        window.location.href = `pago.html?${params}`;
+                    });
             const descripciones = {
                 "MEX vs RSA $1200": {
                     texto: "<b>MEX vs RSA</b><br>Fecha: 10 de Junio 2026<br>Hora: 14:00<br>Estadio: Azteca, Ciudad de Mexico<br>Precio: $1200<br>Sector: Occidental Alta",
