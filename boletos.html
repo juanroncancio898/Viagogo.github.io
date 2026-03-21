@@ -102,14 +102,24 @@
                         <div class="form-group">
                             <label for="partido">Partido que va a ver</label>
                             <select id="partido" name="partido" required>
-                                <option value="">Selecciona...</option>
-                                <option value="MEX vs RSA $1200">MEX vs RSA $1200</option>
-                                <option value="América vs Cali $900">América vs Cali $900</option>
-                                <option value="Junior vs Santa Fe $950">Junior vs Santa Fe $950</option>
-                                <option value="Medellín vs Tolima $850">Medellín vs Tolima $850</option>
-                                <option value="Once Caldas vs Bucaramanga $800">Once Caldas vs Bucaramanga $800</option>
-                                <option value="Cali vs Pasto $780">Cali vs Pasto $780</option>
-                                <option value="Patriotas vs Equidad $700">Patriotas vs Equidad $700</option>
+                                <option value="MEX vs RSA $3000">MEX vs RSA $3000</option>
+                                <option value="KOR vs TBD $1200">KOR vs TBD $1200</option>
+                                <option value="CAN vs TBD $1000">CAN vs TBD $1000</option>
+                                <option value="USA vs PAR $2500">USA vs PAR $2500</option>
+                                <option value="QAT vs SUI $1200">QAT vs SUI $1200</option>
+                                <option value="BRA vs MAR $2800">BRA vs MAR $2800</option>
+                                <option value="AUS vs TBD $1200">AUS vs TBD $1200</option>
+                                <option value="HAI vs SCO $900">HAI vs SCO $900</option>
+                                <option value="GER vs CUW $2000">GER vs CUW $2000</option>
+                                <option value="NED vs JPN $3000">NED vs JPN $3000</option>
+                                <option value="CIV vs ECU $1500">CIV vs ECU $1500</option>
+                                <option value="TBD vs TUN $800">TBD vs TUN $800</option>
+                                <option value="BEL vs EGY $2000">BEL vs EGY $2000</option>
+                                <option value="ESP vs TBD $1800">ESP vs TBD $1800</option>
+                                <option value="IRN vs NZL $900">IRN vs NZL $900</option>
+                                <option value="KSA vs URU $2500">KSA vs URU $2500</option>
+                                <option value="FRA vs SEN $3000">FRA vs SEN $3000</option>
+                                <option value="TBD vs NOR $800">TBD vs NOR $800</option>
                             </select>
                         </div>
                         <div class="form-group">
@@ -234,33 +244,77 @@
                         window.location.href = `pago.html?${params}`;
                     });
             const descripciones = {
-                "MEX vs RSA $1200": {
-                    texto: "<b>MEX vs RSA</b><br>Fecha: 10 de Junio 2026<br>Hora: 14:00<br>Estadio: Azteca, Ciudad de Mexico<br>Precio: $1200<br>Sector: Occidental Alta",
+                "MEX vs RSA $3000": {
+                    texto: "<b>MEX vs RSA</b><br>Fecha: 11 de junio<br>Hora: 14:00<br>Ciudad: Ciudad de México, México<br>Estadio: Estadio Azteca<br>Precio: $3000",
+                    precio: 3000
+                },
+                "KOR vs TBD $1200": {
+                    texto: "<b>KOR vs TBD</b><br>Fecha: 11 de junio<br>Hora: 21:00<br>Ciudad: Zapopan, México<br>Estadio: Estadio Akron<br>Precio: $1200",
                     precio: 1200
                 },
-                "América vs Cali $900": {
-                    texto: "<b>América vs Cali</b><br>Fecha: 12 de marzo 2026<br>Hora: 18:00<br>Estadio: Pascual Guerrero<br>Precio: $900<br>Sector: Sur Baja",
+                "CAN vs TBD $1000": {
+                    texto: "<b>CAN vs TBD</b><br>Fecha: 12 de junio<br>Hora: 15:00<br>Ciudad: Toronto, Canadá<br>Estadio: BMO Field<br>Precio: $1000",
+                    precio: 1000
+                },
+                "USA vs PAR $2500": {
+                    texto: "<b>USA vs PAR</b><br>Fecha: 12 de junio<br>Hora: 18:00<br>Ciudad: Inglewood, CA, EE. UU.<br>Estadio: SoFi Stadium<br>Precio: $2500",
+                    precio: 2500
+                },
+                "QAT vs SUI $1200": {
+                    texto: "<b>QAT vs SUI</b><br>Fecha: 13 de junio<br>Hora: 12:00<br>Ciudad: Santa Clara, CA, EE. UU.<br>Estadio: Levi's Stadium<br>Precio: $1200",
+                    precio: 1200
+                },
+                "BRA vs MAR $2800": {
+                    texto: "<b>BRA vs MAR</b><br>Fecha: 13 de junio<br>Hora: 18:00<br>Ciudad: East Rutherford, NJ, EE. UU.<br>Estadio: MetLife Stadium<br>Precio: $2800",
+                    precio: 2800
+                },
+                "AUS vs TBD $1200": {
+                    texto: "<b>AUS vs TBD</b><br>Fecha: 13 de junio<br>Hora: 21:00<br>Ciudad: Vancouver, Canadá<br>Estadio: BC Place Stadium<br>Precio: $1200",
+                    precio: 1200
+                },
+                "HAI vs SCO $900": {
+                    texto: "<b>HAI vs SCO</b><br>Fecha: 13 de junio<br>Hora: 21:00<br>Ciudad: Foxborough, MA, EE. UU.<br>Estadio: Gillette Stadium<br>Precio: $900",
                     precio: 900
                 },
-                "Junior vs Santa Fe $950": {
-                    texto: "<b>Junior vs Santa Fe</b><br>Fecha: 15 de marzo 2026<br>Hora: 20:00<br>Estadio: Metropolitano<br>Precio: $950<br>Sector: Norte Alta",
-                    precio: 950
+                "GER vs CUW $2000": {
+                    texto: "<b>GER vs CUW</b><br>Fecha: 14 de junio<br>Hora: 12:00<br>Ciudad: Houston, TX, EE. UU.<br>Estadio: NRG Stadium<br>Precio: $2000",
+                    precio: 2000
                 },
-                "Medellín vs Tolima $850": {
-                    texto: "<b>Medellín vs Tolima</b><br>Fecha: 18 de marzo 2026<br>Hora: 17:00<br>Estadio: Atanasio Girardot<br>Precio: $850<br>Sector: Oriental Baja",
-                    precio: 850
+                "NED vs JPN $3000": {
+                    texto: "<b>NED vs JPN</b><br>Fecha: 14 de junio<br>Hora: 15:00<br>Ciudad: Arlington, TX, EE. UU.<br>Estadio: AT&T Stadium<br>Precio: $3000",
+                    precio: 3000
                 },
-                "Once Caldas vs Bucaramanga $800": {
-                    texto: "<b>Once Caldas vs Bucaramanga</b><br>Fecha: 20 de marzo 2026<br>Hora: 16:00<br>Estadio: Palogrande<br>Precio: $800<br>Sector: General",
+                "CIV vs ECU $1500": {
+                    texto: "<b>CIV vs ECU</b><br>Fecha: 14 de junio<br>Hora: 19:00<br>Ciudad: Philadelphia, PA, EE. UU.<br>Estadio: Lincoln Financial Field<br>Precio: $1500",
+                    precio: 1500
+                },
+                "TBD vs TUN $800": {
+                    texto: "<b>TBD vs TUN</b><br>Fecha: 14 de junio<br>Hora: 21:00<br>Ciudad: Monterrey, México<br>Estadio: Estadio BBVA Bancomer<br>Precio: $800",
                     precio: 800
                 },
-                "Cali vs Pasto $780": {
-                    texto: "<b>Cali vs Pasto</b><br>Fecha: 22 de marzo 2026<br>Hora: 19:30<br>Estadio: Deportivo Cali<br>Precio: $780<br>Sector: Sur Alta",
-                    precio: 780
+                "BEL vs EGY $2000": {
+                    texto: "<b>BEL vs EGY</b><br>Fecha: 15 de junio<br>Hora: 12:00<br>Ciudad: Seattle, WA, EE. UU.<br>Estadio: Lumen Field<br>Precio: $2000",
+                    precio: 2000
                 },
-                "Patriotas vs Equidad $700": {
-                    texto: "<b>Patriotas vs Equidad</b><br>Fecha: 25 de marzo 2026<br>Hora: 15:00<br>Estadio: La Independencia<br>Precio: $700<br>Sector: Norte Baja",
-                    precio: 700
+                "ESP vs TBD $1800": {
+                    texto: "<b>ESP vs TBD</b><br>Fecha: 15 de junio<br>Hora: 12:00<br>Ciudad: Atlanta, GA, EE. UU.<br>Estadio: Mercedes-Benz Stadium<br>Precio: $1800",
+                    precio: 1800
+                },
+                "IRN vs NZL $900": {
+                    texto: "<b>IRN vs NZL</b><br>Fecha: 15 de junio<br>Hora: 18:00<br>Ciudad: Inglewood, CA, EE. UU.<br>Estadio: SoFi Stadium<br>Precio: $900",
+                    precio: 900
+                },
+                "KSA vs URU $2500": {
+                    texto: "<b>KSA vs URU</b><br>Fecha: 15 de junio<br>Hora: 18:00<br>Ciudad: Miami, FL, EE. UU.<br>Estadio: Hard Rock Stadium<br>Precio: $2500",
+                    precio: 2500
+                },
+                "FRA vs SEN $3000": {
+                    texto: "<b>FRA vs SEN</b><br>Fecha: 16 de junio<br>Hora: 15:00<br>Ciudad: East Rutherford, NJ, EE. UU.<br>Estadio: MetLife Stadium<br>Precio: $3000",
+                    precio: 3000
+                },
+                "TBD vs NOR $800": {
+                    texto: "<b>TBD vs NOR</b><br>Fecha: 16 de junio<br>Hora: 18:00<br>Ciudad: Foxborough, MA, EE. UU.<br>Estadio: Gillette Stadium<br>Precio: $800",
+                    precio: 800
                 }
             };
             function actualizarDescripcion() {
